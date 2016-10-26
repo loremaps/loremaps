@@ -1,0 +1,869 @@
+﻿{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Mirabar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 628.5, 162 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Griffon's Nest" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 751.5, 254 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Longsaddle" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 662.5, 345.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Triboar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 746.5, 494.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yartar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 808.5, 441.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Red Larch" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 752.5, 559.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Daggerford" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 824.5, 765.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Soubar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1259, 1011.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Beregost" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1079, 1328.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nashkel" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1184.5, 1398 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Crimmor" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1203.5, 1523.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Purskul" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1206, 1550.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Keczulla" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1483, 1464 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Eshpurta" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1588.5, 1468.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Imnescar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1214.5, 1629.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Brost" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1404.5, 1708.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Riatavin" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1755, 1800.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mosstone" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1252, 1834 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Saradush" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1802, 1985.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Schamedar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1573.5, 2327 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Llewellyn" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 579.5, 1466 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Secomber" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1004, 674 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kagarr" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2560, 1892 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Easting" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1623.5, 1197.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Priapurl" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1722, 1206 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Elversult" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1859, 1207.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Proskur" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1732.5, 1126.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Asbravn" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1581.5, 1100.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Berdusk" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1487.5, 1197 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Greenest" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1380.5, 1255 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Triel" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1344, 1075 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Elturel" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1294.5, 1113.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hill's Edge" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1476, 982 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Corm Orp" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1559.5, 955 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hluthvar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1562.5, 1007 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Loudwater" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1145, 614 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Llorkh" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1268, 595 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Everlund" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1030, 278 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nesme" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 854, 232 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sundabar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1200, 188 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Highmoon" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2200.5, 848 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Shadowdale" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2134.5, 609.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Dagger Falls" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2088, 510 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Archenbridge" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2250, 924.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Arabel" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1954.5, 926 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Daerlun" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2161.5, 1046 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Essembra" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2327.5, 675 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ashabenford" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2252, 667.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Whitehorn" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2159, 272.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ilinvur" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2416, 221 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Teshwave" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2206, 453 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Voonlar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2180.5, 522.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Elventree" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2442, 503 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Glister" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2536, 307.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hulburg" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2564, 360 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Darmshall" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2718.5, 302.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Palischuk" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2778, 162 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bloodstone Village" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2794, 308 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Valls" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2840, 405.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Praka" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2934.5, 359 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Trail's End" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2946, 351 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ironspur" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2909.5, 186.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Dragon Falls" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2752, 720 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Laviguer" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2836.5, 609.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nathlekh" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2091.5, 1321 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Cedarspoke" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2378.5, 1232.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lheshayl" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2036, 1552 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ormath" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2138, 1534 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Assam" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2122, 1430 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Xorhun" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2540, 1475 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nonthal" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2656, 1319 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Gildenglade" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2676, 1379 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Jiyyd" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3391, 252.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "N'Jast" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3496, 247 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nathoud" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3988.5, 160.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mulptan" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3815.5, 307.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kront" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3568.5, 424.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bezentil" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3394.5, 463.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Two Stars" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3641.5, 570.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tammar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3519.5, 636 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Phsant" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3387.5, 725.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Phent" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3277.5, 787 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nethentir" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3641, 862.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nethjet" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3633, 906 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Amrutlar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3752.5, 978 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tyraturos" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3866, 1004 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Glarandar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3512.5, 1065 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Relkath's Foot" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3238, 1100 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Pyarados" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3992, 1028.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Almorel" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4458, 646 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Phannaskull" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4380, 1266 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Rauthil" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3995.5, 1306 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Maerlar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3997.5, 1425.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Chethel" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3986.5, 2552 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Delzimmer" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3697.5, 2383 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Eartheart" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3473.5, 2391.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Three Swords" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3320.5, 2447 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kholtar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3380, 2326.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Channathgate" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3068.5, 2531.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Rethmar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2929, 2511 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kormul" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2704.5, 2470 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Shaarmid" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2779.5, 2261.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lapalgard" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2229.5, 2700.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Shamph" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2723, 1603.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Elbulder" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2783.5, 1830 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Torsh" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3051, 1952 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hardcastle" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3337, 2066.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Reddansyr" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2056, 1175.5 ]
+      }
+    }
+  ]
+}

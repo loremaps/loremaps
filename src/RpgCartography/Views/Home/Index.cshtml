@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+
+    <div class="row page-header">
+        <div class="col-xs-12 col-sm-6 v-align">
+            <h1><img class="img-responsive" src="~/images/LoreMaps_Logo.png" alt="LoreMaps" /></h1>
+        </div><!--
+        --><div class="col-xs-12 col-sm-6 v-align">
+            <h2><small>Interactive fantasy maps</small></h2>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <p>LoreMaps is an attempt to help organize information on fantasy maps. With LoreMaps you easily complete the following activities on the fantasy world you are interested in 
+                <ul>
+                    <li>Search a POI by name</li>
+                    <li>Find information about a POI</li>
+                    <li>Create your own bookmarks</li>
+                    <li>Measure distance</li>
+                    <li>Overlay hexagons (HexGrid) on the map</li>
+                    <li>Export portion of the map to jpeg</li>
+                    <li>More coming soon...</li>
+                </ul>
+            </p> 
+            <p>The project is still in early alpha release, so we would really appreciate any feedback you can send either issues or improvement suggestions. Please send your feedback to <a href="mailto:LoreAndMaps@gmail.com">LoreAndMaps@gmail.com</a>.</p>
+        </div>
+    </div>
+
+    <!-- /.row -->
+    <!-- Projects Row -->
+    <div class="row">
+        <div class="col-md-6 portfolio-item">
+            <a asp-controller="Maps" asp-action="GoT">
+                <img class="img-responsive" src="~/images/Maps/GoT_speculative_map700x400.jpg" alt="Game of Thrones map">
+            </a>
+            <h3>
+                <a asp-controller="Maps" asp-action="GoT">Game Of Thrones</a>
+            </h3>
+            <p>Explore the fantasy world of George R. R. Martin's fantasy series <i>Song of Ice and Fire</i>.</p>
+        </div>
+
+        <div class="col-md-6 portfolio-item">
+            <a asp-controller="Maps" asp-action="Faerun">
+                <img class="img-responsive" src="~/images/Maps/faerunlarge700x400.jpg" alt="Faerun Map">
+            </a>
+            <h3>
+                <a asp-controller="Maps" asp-action="Faerun">Faerun</a>
+            </h3>
+            <p>Explore the primary setting of the <i>Dungeons & Dragons</i> world of <i>Forgotten Realms</i>.</p>
+        </div>
+    </div>
+
+</div>

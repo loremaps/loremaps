@@ -1,0 +1,111 @@
+﻿@{
+    ViewData["Title"] = "Game of Thrones Map";
+}
+<h2>@ViewData["Title"]</h2>
+
+<style>
+	html,body{height:100%;}
+
+    .container-fluid {
+        height:100%;
+        width: 100%;
+    }
+
+    #map {
+        height: 80%;
+        width: 100%;
+    }
+</style>
+
+
+<div id="sidebar">
+</div>
+
+<div id="map"></div>
+
+@section scripts {
+
+    <script>
+
+        var gotMapOptions = {
+            
+            map: {
+                minZoom: 0,
+                maxZoom: 6
+            },
+
+            image: {
+                width: 4642,
+                height: 4642,
+                TilesUrl: '//loremaps.github.io/LoreMaps-GoT-Tiles/Tiles',
+                meterPerPixel: 2266.681,
+                attribution: 'Map data <a href="http://www.sermountaingoat.co.uk/">serMountainGoat</a>, <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC-BY-NC-SA</a>'
+            },
+
+            data: {
+                '@Url.Content("~/data/GoT/Cities.json")': 'Cities',
+                '@Url.Content("~/data/GoT/Towns.json")': 'Towns',
+                '@Url.Content("~/data/GoT/Castles.json")': 'Castles',
+                '@Url.Content("~/data/GoT/Ruins.json")': 'Ruins',
+                '@Url.Content("~/data/GoT/Others.json")': 'Others'
+            },
+
+            wiki: {
+                url: '//awoiaf.westeros.org',
+                apiUrl: '//awoiaf.westeros.org/api.php',
+                attribution: 'Info <a href="http://awoiaf.westeros.org">A Wiki of Ice and Fire</a>',
+                wikiParseMarkup: function (markup) {
+                    var blurb = $('<div></div>').html(markup);
+
+                    // remove links as they will not work
+                    blurb.find('a').each(function () { $(this).replaceWith($(this).html()); });
+
+                    //rewrite relative image links
+                    var isExternalRegEx = new RegExp('^(?:[a-z]+:)?//', 'i');
+
+                    blurb.find('img').not('[src^="http"],[src^="https"]').each(function () {
+                        $(this).attr('src', function (index, value) {
+                            if (!isExternalRegEx.test(value)) {
+                                return FantasyMap.options.wiki.url + value;
+                            }
+                        })
+
+                        var srcset = $(this).attr('srcset');
+
+                        if (typeof srcset !== typeof undefined && srcset !== false) {
+
+                            var items = srcset.split(',');
+
+                            for (var i = 0; i < items.length; i++) {
+                                var item = items[i].trim();
+                                if (!isExternalRegEx.test(item)) {
+                                    items[i] = FantasyMap.options.wiki.url + item;
+                                }
+                            }
+
+                            $(this).attr('srcset', items.join(', '));
+                        }
+
+                    });
+
+                    // remove any references
+                    blurb.find('sup').remove();
+
+                    // remove cite error
+                    blurb.find('.mw-ext-cite-error').remove();
+
+                    // remove edit links
+                    blurb.find('.mw-editsection').remove();
+
+                    return blurb;
+                }
+            }
+
+        };
+
+        FantasyMap.initialize(gotMapOptions);
+        FantasyMap._map.setView(FantasyMap._rc.unproject([900, 2400]), 4);
+
+    </script>
+
+}

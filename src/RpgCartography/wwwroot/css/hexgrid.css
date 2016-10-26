@@ -1,0 +1,43 @@
+﻿.leaflet-control-hexgrid {
+    background-color: white;
+}
+
+.hexGridLink {
+    background-image: url('/images/hex_full30.png');
+    cursor: pointer;
+    float: left;
+    border-bottom: none;
+}
+
+.hexgrid-visible {
+    background-image: url('/images/hex_empty30.png');
+    cursor: pointer;
+    float: left;
+}
+
+.hexGridLink ~ .hexGridRangeDiv {
+    display: none;
+}
+
+.hexGridLink.hexgrid-visible ~ .hexGridRangeDiv {
+    display: inherit;
+    float: left;
+    padding: 0px 10px 10px 10px;
+}
+
+/*.hexGridRangeDiv
+{
+    float: left;
+    padding: 0px 10px 10px 10px;
+}*/
+
+
+.hexGridRangeOutput
+{
+    display:inline;
+}
+
+.hexGridRangeInput{
+    /* IE11 fix */
+    min-width: 120px;   
+}
