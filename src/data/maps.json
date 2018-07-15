@@ -1,0 +1,73 @@
+[
+  {
+    "id": "1",
+    "name": "Faerun",
+    "image": {
+      "tilesUrl": "//loremaps.github.io/LoreMaps-Faerun-Tiles/Tiles",
+      "width": 4763,
+      "height": 3185,
+      "meterPerPixel": 1287.473
+    },
+    "map": {
+      "minZoom": 0,
+      "maxZoom": 6,
+      "unproject": {
+        "coords": [0, 0],
+        "level": 4
+      }
+    },
+    "data": [
+      "Capitals",
+      "Cities",
+      "Fortresses",
+      "PortCapitals",
+      "Ports",
+      "Ruins",
+      "Sites",
+      "Temples"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "GoT",
+    "image": {
+      "tilesUrl": "//loremaps.github.io/LoreMaps-GoT-Tiles/Tiles",
+      "width": 4642,
+      "height": 4642,
+      "meterPerPixel": 2266.681
+    },
+    "map": {
+      "minZoom": 0,
+      "maxZoom": 6,
+      "unproject": {
+        "coords": [900, 2400],
+        "level": 4
+      }
+    },
+    "data": [
+      "Castles",
+      "Cities",
+      "Others",
+      "Ruins",
+      "Towns"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "WFI",
+    "image": {
+      "tilesUrl": "//dotf.github.io/loremaps-wfi-tiles",
+      "width": 4000,
+      "height": 3000,
+      "meterPerPixel": 2266.681
+    },
+    "map": {
+      "minZoom": 0,
+      "maxZoom": 6,
+      "unproject": {
+        "coords": [900, 1000],
+        "level": 3
+      }
+    }
+  }
+]

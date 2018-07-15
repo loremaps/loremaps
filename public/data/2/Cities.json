@@ -1,0 +1,189 @@
+﻿{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "White Harbor" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 846.5, 1431.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Gulltown" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1232.5, 1923.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lannisport" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 368.5, 2238 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tyrosh" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1425.5, 2679 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Oldtown" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 388, 2828.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lys" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1584.5, 2949 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Myr" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1685, 2629.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Pentos" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1556.5, 2268.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Braavos" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1548.5, 1687.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lorath" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1812, 1760.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Norvos" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1915.5, 2061.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Qohor" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2248.5, 2263.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Volantis" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2181.5, 2960.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mantarys" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2826.5, 3082.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tolos" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2956.5, 3160 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Elyria" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2887, 3188.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Astapor" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3245.5, 3261.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "New Ghis" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3338.5, 3678.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Qarth" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4400, 4229.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Vaes Dothrak" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3246.5, 2556.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Meereen" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3356.5, 2980 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yunkai" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3292.5, 3062.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "King's Landing" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 954, 2302.5 ]
+      }
+    }
+  ]
+}

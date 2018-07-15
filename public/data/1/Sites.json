@@ -1,0 +1,53 @@
+﻿{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Grandfather Tree" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1054.5, 396 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Monastery of the Yellow Rose" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2799, 483 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Laviguer" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2896.5, 607.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "The Mucklestones" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3444.5, 494 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Well of Dragons" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1631.5, 849.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mount Talath" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2417, 2791.5 ]
+      }
+    }
+  ]
+}
