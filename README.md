@@ -4,4 +4,4 @@
 
 ## Important Note
 
-LoreMaps will be re-written from scratch. The old implementation is available [here](/github/loremaps/tree/aspnet-mvc-live)
+LoreMaps will be re-written from scratch. The old implementation is available [here](https://github.com/loremaps/LoreMaps/tree/aspnet-mvc-live)
