@@ -25,7 +25,11 @@
       "Ruins",
       "Sites",
       "Temples"
-    ]
+    ],
+    "wiki": {
+      "url": "https://forgottenrealms.wikia.com",
+      "apiUrl": "https://forgottenrealms.wikia.com/api.php"
+    }
   },
   {
     "id": "2",
@@ -44,13 +48,11 @@
         "level": 4
       }
     },
-    "data": [
-      "Castles",
-      "Cities",
-      "Others",
-      "Ruins",
-      "Towns"
-    ]
+    "data": ["Castles", "Cities", "Others", "Ruins", "Towns"],
+    "wiki": {
+      "url": "https://awoiaf.westeros.org",
+      "apiUrl": "https://awoiaf.westeros.org/api.php"
+    }
   },
   {
     "id": "3",
