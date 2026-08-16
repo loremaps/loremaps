@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "loremaps",
+  "compatibility_date": "2026-08-16",
+
+  // Personal account, pinned deliberately: this machine also authenticates a
+  // work account, so a wrong-profile deploy should fail loudly here rather
+  // than quietly create a Worker in the wrong tenant. Not a secret.
+  "account_id": "ae81dcb080f35932e1b2cb1664f00c1f",
+
+  // Assets-only Worker: there is no "main" script, so every request is served
+  // straight from ./dist with no Worker invocation (and no request billed).
+  // Adding "main" later — e.g. an /api/awoiaf proxy to work around the wiki's
+  // missing CORS headers — is purely additive; asset routing stays as-is.
+  "assets": {
+    "directory": "./dist",
+
+    // Astro's default build.format is "directory", so pages land at
+    // dist/maps/got/index.html. This resolves /maps/got to that file.
+    "html_handling": "auto-trailing-slash",
+
+    // No src/pages/404.astro exists yet, so there is nothing to serve for a
+    // miss. Add one and switch this to "404-page" to use it.
+    "not_found_handling": "none"
+  }
+}

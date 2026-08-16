@@ -1,0 +1,19 @@
+# Cache policy. Copied verbatim into dist/ by Astro, then read by Workers
+# static assets at deploy time. Max 100 rules; 2000 chars per line.
+
+# Vite content-hashes everything here, so the filename changes whenever the
+# bytes do. Safe to cache permanently.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Map preview images: stable filenames, so they must stay revalidatable.
+/images/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# POI data: same deal, but updated more often than the imagery.
+/data/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
