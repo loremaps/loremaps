@@ -52,30 +52,6 @@ src/pages/         landing page + /maps/[id] generated from the registry
    a `name` property per feature).
 3. Add a `MapDefinition` in `src/maps/` and register it in `src/maps/index.ts`.
 
-## Analytics
-
-Cookieless Google Analytics 4 (`src/lib/analytics.ts`), deliberately configured so the site
-needs **no cookie-consent banner**: the tag reads and writes nothing on the visitor's device —
-no cookie, no `localStorage`, no `sessionStorage` — so ePrivacy Art. 5(3), the rule that forces
-consent banners, does not apply.
-
-Two things are load-bearing and easy to break:
-
-- **`client_storage: 'none'`, never Consent Mode.** Both make GA4 cookieless, but hits sent under
-  `analytics_storage: 'denied'` only feed Google's modelling and never surface in reports at this
-  site's traffic level. Adding a `gtag('consent', ...)` call would silently blank every dashboard.
-- **`client_id` is a fresh UUID per page load, held in memory.** Persisting it anywhere — as most
-  "cookieless GA" recipes suggest — is exactly the terminal-equipment storage that brings the
-  banner back. The trade-off is that event and pageview counts stay meaningful while "users",
-  sessions and retention do not.
-
-Visitors sending Do Not Track or Global Privacy Control are skipped entirely — no request reaches
-Google.
-
-Set `PUBLIC_GA_MEASUREMENT_ID` in `.env` (see `.env.example`). Unset it and analytics compiles
-away to nothing, which is the default for local development. Because the site is statically
-built, the ID is baked in at build time, so the production build needs the variable present.
-
 ### Extensibility notes (future work)
 
 - **User-uploaded maps** — `MapDefinition` is plain JSON, so uploaded maps are just stored
