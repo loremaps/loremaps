@@ -1,0 +1,215 @@
+---
+import 'vanilla-cookieconsent/dist/cookieconsent.css';
+
+const configured = import.meta.env.PROD && Boolean(import.meta.env.PUBLIC_GA_MEASUREMENT_ID);
+---
+
+{configured && <div data-cookie-consent-root></div>}
+
+<script>
+  import { acceptedCategory, run, showPreferences } from 'vanilla-cookieconsent';
+  import type { CookieConsentConfig } from 'vanilla-cookieconsent';
+  import { disableAnalytics, enableAnalytics } from '../lib/analytics';
+
+  const root = document.querySelector('[data-cookie-consent-root]');
+
+  if (root) {
+    const syncAnalytics = () => {
+      if (acceptedCategory('analytics')) {
+        enableAnalytics();
+      } else {
+        disableAnalytics();
+      }
+    };
+
+    const config: CookieConsentConfig = {
+      mode: 'opt-in',
+      revision: 1,
+      manageScriptTags: false,
+      autoClearCookies: true,
+      cookie: {
+        name: 'cc_cookie',
+        path: '/',
+        sameSite: 'Lax',
+        secure: true,
+        expiresAfterDays: 182,
+      },
+      guiOptions: {
+        consentModal: {
+          layout: 'box inline',
+          position: 'bottom left',
+          equalWeightButtons: true,
+        },
+        preferencesModal: {
+          layout: 'box',
+          equalWeightButtons: true,
+        },
+      },
+      categories: {
+        necessary: {
+          enabled: true,
+          readOnly: true,
+        },
+        analytics: {
+          enabled: false,
+          readOnly: false,
+          autoClear: {
+            cookies: [{ name: /^_ga/, path: '/' }],
+            reloadPage: true,
+          },
+        },
+      },
+      onConsent: syncAnalytics,
+      onChange: syncAnalytics,
+      language: {
+        default: 'en',
+        translations: {
+          en: {
+            consentModal: {
+              title: 'Optional analytics',
+              description:
+                'LoreMaps would like to use Google Analytics cookies to learn which maps and tools are useful. Nothing is sent to Google unless you accept.',
+              acceptAllBtn: 'Accept analytics',
+              acceptNecessaryBtn: 'Reject analytics',
+              showPreferencesBtn: 'Cookie settings',
+              footer: '<a href="/privacy/">Privacy &amp; cookies</a>',
+            },
+            preferencesModal: {
+              title: 'Cookie settings',
+              acceptAllBtn: 'Accept analytics',
+              acceptNecessaryBtn: 'Reject analytics',
+              savePreferencesBtn: 'Save settings',
+              closeIconLabel: 'Close cookie settings',
+              serviceCounterLabel: 'Service|Services',
+              sections: [
+                {
+                  title: 'Your privacy choices',
+                  description:
+                    'Required storage keeps your choices working. Optional analytics helps improve LoreMaps and is off until you allow it.',
+                },
+                {
+                  title: 'Required storage <span class="pm__badge">Always enabled</span>',
+                  description:
+                    'LoreMaps stores your cookie choice and preferred distance units on this device. These values are not sent to Google.',
+                  linkedCategory: 'necessary',
+                  cookieTable: {
+                    headers: {
+                      name: 'Name',
+                      type: 'Type',
+                      purpose: 'Purpose',
+                      duration: 'Duration',
+                    },
+                    body: [
+                      {
+                        name: 'cc_cookie',
+                        type: 'Cookie',
+                        purpose: 'Remembers this consent choice',
+                        duration: '182 days',
+                      },
+                      {
+                        name: 'loremaps.units',
+                        type: 'Local storage',
+                        purpose: 'Remembers metric or imperial units',
+                        duration: 'Until removed',
+                      },
+                    ],
+                  },
+                },
+                {
+                  title: 'Google Analytics',
+                  description:
+                    'After you accept, Google Analytics records page visits, device and approximate location information, and interactions with map tools. Advertising features remain disabled.',
+                  linkedCategory: 'analytics',
+                  cookieTable: {
+                    headers: {
+                      name: 'Name',
+                      purpose: 'Purpose',
+                      duration: 'Duration',
+                    },
+                    body: [
+                      {
+                        name: '_ga',
+                        purpose: 'Distinguishes visitors',
+                        duration: '2 years',
+                      },
+                      {
+                        name: '_ga_*',
+                        purpose: 'Maintains session state',
+                        duration: '2 years',
+                      },
+                    ],
+                  },
+                },
+                {
+                  title: 'More information',
+                  description:
+                    'Read the <a class="cc__link" href="/privacy/">Privacy &amp; cookies page</a> for the full list of measured interactions and links to Google’s privacy information.',
+                },
+              ],
+            },
+          },
+        },
+      },
+    };
+
+    void run(config).then(() => {
+      document.querySelectorAll<HTMLElement>('[data-cookie-settings]').forEach((button) => {
+        button.addEventListener('click', () => showPreferences());
+      });
+    });
+  }
+</script>
+
+<style is:global>
+  #cc-main {
+    --cc-font-family: var(--sans);
+    --cc-modal-border-radius: 12px;
+    --cc-btn-border-radius: 7px;
+    --cc-bg: var(--bg-raised);
+    --cc-primary-color: var(--ink);
+    --cc-secondary-color: var(--muted);
+    --cc-btn-primary-bg: var(--accent);
+    --cc-btn-primary-color: #171410;
+    --cc-btn-primary-border-color: var(--accent);
+    --cc-btn-primary-hover-bg: #e4b45b;
+    --cc-btn-primary-hover-color: #171410;
+    --cc-btn-primary-hover-border-color: #e4b45b;
+    --cc-btn-secondary-bg: #30291f;
+    --cc-btn-secondary-color: var(--ink);
+    --cc-btn-secondary-border-color: #4c402f;
+    --cc-btn-secondary-hover-bg: #3a3125;
+    --cc-btn-secondary-hover-color: var(--ink);
+    --cc-btn-secondary-hover-border-color: var(--accent);
+    --cc-separator-border-color: var(--line);
+    --cc-toggle-on-bg: var(--accent);
+    --cc-toggle-off-bg: #655a49;
+    --cc-toggle-on-knob-bg: #171410;
+    --cc-toggle-off-knob-bg: var(--ink);
+    --cc-toggle-readonly-bg: #4c4438;
+    --cc-toggle-readonly-knob-bg: var(--muted);
+    --cc-toggle-readonly-knob-icon-color: #4c4438;
+    --cc-cookie-category-block-bg: #1b1712;
+    --cc-cookie-category-block-border: var(--line);
+    --cc-cookie-category-block-hover-bg: #272118;
+    --cc-cookie-category-block-hover-border: #4c402f;
+    --cc-cookie-category-expanded-block-bg: transparent;
+    --cc-cookie-category-expanded-block-hover-bg: #30291f;
+    --cc-overlay-bg: rgba(8, 7, 5, 0.72);
+    --cc-footer-bg: #171410;
+    --cc-footer-color: var(--muted);
+    --cc-footer-border-color: var(--line);
+    color-scheme: dark;
+  }
+
+  #cc-main .cm,
+  #cc-main .pm {
+    border: 1px solid var(--line);
+  }
+
+  #cc-main .cm__title,
+  #cc-main .pm__title,
+  #cc-main .pm__section-title {
+    font-family: var(--serif);
+    letter-spacing: 0.01em;
+  }
+</style>

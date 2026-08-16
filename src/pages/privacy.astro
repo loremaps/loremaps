@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Privacy & cookies"
+  description="How LoreMaps uses device storage and optional Google Analytics."
+>
+  <main class="content-page">
+    <header class="content-page__header">
+      <p class="eyebrow">LoreMaps</p>
+      <h1>Privacy &amp; cookies</h1>
+      <p class="lede">
+        LoreMaps works without analytics. Google Analytics is optional and stays completely
+        unloaded until you accept it.
+      </p>
+    </header>
+
+    <section>
+      <h2>Required storage</h2>
+      <p>
+        The{' '}<code>cc_cookie</code> cookie remembers your analytics choice for 182 days. The{' '}
+        <code>loremaps.units</code> local-storage value remembers whether you prefer metric or imperial
+        distances until you remove it. Neither value is sent to Google.
+      </p>
+    </section>
+
+    <section>
+      <h2>Optional Google Analytics</h2>
+      <p>
+        If you accept analytics, Google Analytics sets first-party{' '}<code>_ga</code> and{' '}
+        <code>_ga_*</code> cookies. Google documents a default lifetime of two years: the first distinguishes
+        visitors and the second maintains session state.
+      </p>
+      <p>After acceptance, analytics may receive:</p>
+      <ul>
+        <li>the page address, title, referrer, browser and device information;</li>
+        <li>an approximate location derived by Google from the network request;</li>
+        <li>the map, selected place and layer when you open or choose a search result;</li>
+        <li>completed measurements, grid and unit changes, layer toggles and panel use; and</li>
+        <li>technical error messages needed to diagnose broken features.</li>
+      </ul>
+      <p>
+        LoreMaps does not send the raw text you type into search. Only the name of a place chosen
+        from LoreMaps data can be measured. Advertising storage, Google Signals and advertising
+        personalisation remain disabled.
+      </p>
+    </section>
+
+    <section>
+      <h2>Change your choice</h2>
+      <p>
+        Use <strong>Cookie settings</strong> in the site footer at any time. Withdrawing analytics
+        consent stops LoreMaps analytics events, removes the Google Analytics cookies and reloads
+        the page without the Google tag.
+      </p>
+      <p>
+        A browser Global Privacy Control or Do Not Track signal overrides an analytics acceptance,
+        so LoreMaps will not load Google Analytics on that device.
+      </p>
+    </section>
+
+    <section>
+      <h2>More information</h2>
+      <p>
+        See Google’s{' '}<a href="https://support.google.com/analytics/answer/11397207">GA4 cookie documentation</a>{' '}
+        and{' '}<a href="https://policies.google.com/privacy">privacy policy</a>. Questions about LoreMaps can
+        be raised through the{' '}<a href="https://github.com/loremaps/LoreMaps">project on GitHub</a>.
+      </p>
+      <p class="fine-print">
+        This page describes the site’s technical behavior; it is not a legal-compliance certification.
+      </p>
+    </section>
+  </main>
+</Base>

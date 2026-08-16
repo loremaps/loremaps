@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import { maps } from '../maps';
-import Analytics from '../components/Analytics.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 
 interface Props {
   title: string;
@@ -16,6 +16,7 @@ const {
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
+const analyticsConfigured = import.meta.env.PROD && Boolean(import.meta.env.PUBLIC_GA_MEASUREMENT_ID);
 ---
 
 <!doctype html>
@@ -27,7 +28,6 @@ const currentPath = Astro.url.pathname;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} · LoreMaps</title>
-    <Analytics />
   </head>
   <body class:list={[{ 'full-bleed': fullBleed }]}>
     <header class="site-header">
@@ -58,10 +58,22 @@ const currentPath = Astro.url.pathname;
         <footer class="site-footer">
           <p>
             LoreMaps — map data and lore belong to their respective creators.&nbsp;
+            <a href="/privacy/">Privacy &amp; cookies</a>&nbsp;·&nbsp;
+            {
+              analyticsConfigured && (
+                <>
+                  <button class="cookie-settings" type="button" data-cookie-settings>
+                    Cookie settings
+                  </button>
+                  &nbsp;·&nbsp;
+                </>
+              )
+            }
             <a href="https://github.com/loremaps/LoreMaps">Source on GitHub</a>
           </p>
         </footer>
       )
     }
+    <CookieConsent />
   </body>
 </html>

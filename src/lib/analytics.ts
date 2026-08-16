@@ -1,33 +1,10 @@
 /**
- * Cookieless Google Analytics 4.
+ * Consent-gated Google Analytics 4.
  *
- * The tag reads and writes **nothing** on the visitor's device — no cookie, no
- * localStorage, no sessionStorage. That is what makes the site banner-free:
- * ePrivacy Art. 5(3), the rule that forces consent banners, is triggered by
- * storing or accessing information on terminal equipment, not by "analytics"
- * as such. Touch no storage and the article simply does not apply.
- *
- * Consent Mode is the only mechanism that actually achieves this. Verified
- * against the live tag on 2026-08-16:
- *
- *   - `client_storage: 'none'` is widely recommended online and **does not
- *     work**. The current Google tag does not recognise it as a config
- *     directive: it forwards it to the payload as `ep.client_storage=none`
- *     and writes `_ga` / `_ga_<id>` anyway. Same for `anonymize_ip` and
- *     `transport_type`. Do not reintroduce them.
- *   - `gtag('consent', 'default', { analytics_storage: 'denied', ... })`
- *     genuinely writes nothing — no cookie, no localStorage, no
- *     sessionStorage. Hits still go out, tagged `gcs=G100`.
- *
- * The cost is real and must not be papered over: `gcs=G100` hits are
- * cookieless pings that feed Google's behavioural modelling and do not
- * populate standard reports at low traffic volumes.
- *
- * The cost of having no storage is that `client_id` cannot persist: it is a
- * fresh UUID per page load, held in memory only. Event and pageview counts
- * stay meaningful; "users", sessions and retention do not. Persisting the id
- * anywhere — as most "cookieless GA" recipes suggest — would put the banner
- * straight back.
+ * Basic consent mode is deliberate: this module is not enabled and gtag.js is
+ * not requested until the visitor accepts analytics cookies. Once accepted,
+ * GA manages its normal first-party client and session cookies. Ad storage,
+ * Google Signals and ad personalisation remain disabled.
  */
 
 type GtagParams = Record<string, string | number | boolean>;
@@ -44,6 +21,7 @@ const MAX_EVENT_NAME = 40;
 const MAX_PARAM_VALUE = 100;
 
 let enabled = false;
+let errorListenersAttached = false;
 
 /** Visitors who ask not to be measured aren't measured — and never reach Google at all. */
 function optedOut(): boolean {
@@ -51,25 +29,21 @@ function optedOut(): boolean {
   return nav.globalPrivacyControl === true || navigator.doNotTrack === '1';
 }
 
-/** `crypto.randomUUID` needs a secure context; previewing over a LAN IP isn't one. */
-function randomId(): string {
-  return typeof crypto?.randomUUID === 'function'
-    ? crypto.randomUUID()
-    : `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 12)}`;
-}
-
-export function initAnalytics(): void {
+/** Enable GA after an explicit analytics-consent choice. */
+export function enableAnalytics(): boolean {
   try {
-    setup();
+    return setup();
   } catch {
     /* analytics must never break the page */
+    return false;
   }
 }
 
-function setup(): void {
+function setup(): boolean {
   const id = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
-  if (!id || enabled || typeof window === 'undefined') return;
-  if (optedOut()) return;
+  if (!import.meta.env.PROD || !id || typeof window === 'undefined') return false;
+  if (enabled) return true;
+  if (optedOut()) return false;
 
   const dataLayer = (window.dataLayer ??= []);
   // gtag.js identifies its own commands by the pushed value being an `Arguments`
@@ -84,32 +58,56 @@ function setup(): void {
     ad_storage: 'denied',
     ad_user_data: 'denied',
     ad_personalization: 'denied',
-    analytics_storage: 'denied',
+    analytics_storage: 'granted',
     functionality_storage: 'denied',
     personalization_storage: 'denied',
     security_storage: 'granted',
   });
   gtag('js', new Date());
   gtag('config', id, {
-    // In-memory only. Never persist this — see the module comment.
-    client_id: randomId(),
     allow_google_signals: false,
     allow_ad_personalization_signals: false,
   });
 
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
-  document.head.appendChild(script);
+  if (!document.querySelector('script[data-loremaps-analytics]')) {
+    const script = document.createElement('script');
+    script.async = true;
+    script.dataset.loremapsAnalytics = '';
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
+    document.head.appendChild(script);
+  }
 
   enabled = true;
 
-  window.addEventListener('error', (e) => {
-    trackError('window', e.message, true);
-  });
-  window.addEventListener('unhandledrejection', (e) => {
-    trackError('promise', String(e.reason), true);
-  });
+  if (!errorListenersAttached) {
+    window.addEventListener('error', (e) => {
+      trackError('window', e.message, true);
+    });
+    window.addEventListener('unhandledrejection', (e) => {
+      trackError('promise', String(e.reason), true);
+    });
+    errorListenersAttached = true;
+  }
+
+  return true;
+}
+
+/** Stop app events immediately; the consent UI clears cookies and reloads. */
+export function disableAnalytics(): void {
+  enabled = false;
+  try {
+    window.gtag?.('consent', 'update', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'denied',
+      personalization_storage: 'denied',
+      security_storage: 'granted',
+    });
+  } catch {
+    /* analytics must never break the page */
+  }
 }
 
 /**

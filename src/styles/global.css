@@ -37,6 +37,7 @@ a {
 .site-header {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
   padding: 0.65rem 1.25rem;
   border-bottom: 1px solid var(--line);
@@ -61,6 +62,8 @@ a {
 
 .site-header nav {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -163,4 +166,111 @@ body.full-bleed {
   text-align: center;
   padding: 1.25rem;
   margin-top: 3rem;
+}
+
+.site-footer .cookie-settings {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.site-footer .cookie-settings:hover,
+.site-footer .cookie-settings:focus-visible {
+  color: var(--ink);
+}
+
+/* --- content pages --- */
+
+.content-page {
+  width: min(100% - 2.5rem, 48rem);
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+}
+
+.content-page__header {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2.25rem;
+}
+
+.content-page .eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.content-page h1,
+.content-page h2 {
+  font-family: var(--serif);
+}
+
+.content-page h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.1;
+}
+
+.content-page h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.45rem;
+}
+
+.content-page section + section {
+  margin-top: 2.25rem;
+}
+
+.content-page p,
+.content-page ul {
+  color: var(--muted);
+}
+
+.content-page .lede {
+  max-width: 40rem;
+  margin: 0.8rem 0 1.25rem;
+  font-size: 1.08rem;
+}
+
+.content-page li + li {
+  margin-top: 0.35rem;
+}
+
+.content-page code {
+  color: var(--ink);
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+.content-page .fine-print {
+  font-size: 0.82rem;
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    gap: 0.55rem 1rem;
+    padding-inline: 1rem;
+  }
+
+  .site-header nav {
+    width: 100%;
+    gap: 0.45rem 0.85rem;
+  }
+
+  .site-header nav a {
+    font-size: 0.85rem;
+  }
+
+  .content-page {
+    width: min(100% - 2rem, 48rem);
+    padding-top: 2rem;
+  }
 }
