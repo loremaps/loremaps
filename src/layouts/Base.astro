@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { maps } from '../maps';
+import Analytics from '../components/Analytics.astro';
 
 interface Props {
   title: string;
@@ -26,6 +27,7 @@ const currentPath = Astro.url.pathname;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} · LoreMaps</title>
+    <Analytics />
   </head>
   <body class:list={[{ 'full-bleed': fullBleed }]}>
     <header class="site-header">

@@ -26,7 +26,10 @@ export class MeasureControl extends L.Control {
   private vertices?: L.LayerGroup;
   private tooltip?: L.Tooltip;
 
-  constructor(private distance: (a: L.LatLng, b: L.LatLng) => number) {
+  constructor(
+    private distance: (a: L.LatLng, b: L.LatLng) => number,
+    private onFinish?: (meters: number, points: number) => void,
+  ) {
     super({ position: 'topleft' });
   }
 
@@ -96,6 +99,7 @@ export class MeasureControl extends L.Control {
     const last = this.points[this.points.length - 1]!;
     this.tooltip?.setLatLng(last);
     this.updateTooltip();
+    this.onFinish?.(this.totalMeters, this.points.length);
   }
 
   /** Abort and remove everything. */

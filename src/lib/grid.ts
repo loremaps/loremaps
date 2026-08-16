@@ -40,8 +40,13 @@ export class GridControl extends L.Control {
   constructor(
     private rc: RasterCoords,
     private metersPerPixel: number,
+    private onChange?: (type: GridType, cellSize: number, units: string) => void,
   ) {
     super({ position: 'topleft' });
+  }
+
+  private report(): void {
+    this.onChange?.(this.gridType, this.cellSize, getUnits());
   }
 
   override onAdd(map: L.Map): HTMLElement {
@@ -79,6 +84,7 @@ export class GridControl extends L.Control {
         seg.querySelectorAll('button').forEach((el) => el.classList.toggle('is-active', el === b));
         this.button.classList.toggle('is-on', type !== 'none');
         this.update();
+        this.report();
       });
     }
 
@@ -94,7 +100,11 @@ export class GridControl extends L.Control {
       this.cellSize = Number(slider.value);
       this.updateLabel();
     });
-    slider.addEventListener('change', () => this.render());
+    slider.addEventListener('change', () => {
+      this.render();
+      // A resize is only meaningful once a grid is actually showing.
+      if (this.gridType !== 'none') this.report();
+    });
 
     this.hintEl = L.DomUtil.create('div', 'lm-grid__hint', panel);
 

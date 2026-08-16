@@ -2,12 +2,22 @@
  * Slide-over panel that shows POI content next to the map. Plain DOM — it
  * lives outside the Leaflet container so map interactions are unaffected.
  */
+export interface PanelOptions {
+  onNavigate?: (page: string) => void;
+  /** Fired only on an actual state change, not on every `open()` call. */
+  onOpen?: (title: string) => void;
+  onClose?: () => void;
+}
+
 export class SidePanel {
   private root: HTMLElement;
   private titleEl: HTMLElement;
   private bodyEl: HTMLElement;
 
-  constructor(host: HTMLElement, opts: { onNavigate?: (page: string) => void } = {}) {
+  private opts: PanelOptions;
+
+  constructor(host: HTMLElement, opts: PanelOptions = {}) {
+    this.opts = opts;
     const root = (this.root = document.createElement('aside'));
     root.className = 'lm-panel';
     root.hidden = true;
@@ -38,8 +48,12 @@ export class SidePanel {
   }
 
   open(title: string): void {
+    // openPoi() calls this twice per POI (name, then resolved article title),
+    // so only report the hidden -> visible transition.
+    const wasHidden = this.root.hidden;
     this.titleEl.textContent = title;
     this.root.hidden = false;
+    if (wasHidden) this.opts.onOpen?.(title);
   }
 
   setLoading(): void {
@@ -55,6 +69,8 @@ export class SidePanel {
   }
 
   close(): void {
+    if (this.root.hidden) return;
     this.root.hidden = true;
+    this.opts.onClose?.();
   }
 }

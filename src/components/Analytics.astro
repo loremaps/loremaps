@@ -1,0 +1,12 @@
+---
+/**
+ * Cookieless GA4. Deliberately a bundled (not `is:inline`) script: inline
+ * scripts skip Vite, so `import.meta.env.PUBLIC_GA_MEASUREMENT_ID` would be
+ * emitted literally instead of being substituted at build time.
+ */
+---
+
+<script>
+  import { initAnalytics } from '../lib/analytics';
+  initAnalytics();
+</script>

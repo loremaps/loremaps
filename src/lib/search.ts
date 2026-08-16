@@ -15,7 +15,10 @@ export class SearchControl extends L.Control {
   private input!: HTMLInputElement;
   private list!: HTMLUListElement;
 
-  constructor(private targetZoom: number) {
+  constructor(
+    private targetZoom: number,
+    private onSelect?: (entry: SearchEntry) => void,
+  ) {
     super({ position: 'topleft' });
   }
 
@@ -81,6 +84,7 @@ export class SearchControl extends L.Control {
   }
 
   private select(entry: SearchEntry): void {
+    this.onSelect?.(entry);
     this.map.setView(entry.latlng, this.targetZoom);
     entry.activate();
     this.input.value = entry.name;

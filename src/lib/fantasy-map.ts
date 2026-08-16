@@ -12,6 +12,8 @@ import { MeasureControl } from './measure';
 import { GridControl } from './grid';
 import { ScaleBarControl } from './scale';
 import { UnitsControl } from './units';
+import { onUnitsChange } from './prefs';
+import { track, trackError } from './analytics';
 
 /** Entry point for /maps/[id] pages: reads the embedded JSON definition. */
 export function initMapPage(): void {
@@ -43,10 +45,16 @@ export function createFantasyMap(container: HTMLElement, def: MapDefinition): L.
 
   const panel = new SidePanel(container.parentElement ?? document.body, {
     onNavigate: (page) => void openPoi(page),
+    onOpen: () => track('panel_toggle', { state: 'shown' }),
+    onClose: () => track('panel_toggle', { state: 'hidden' }),
   });
+
+  /** Which layer a POI came from, for the `poi_*` events. */
+  const poiLayerOf = new Map<string, string>();
 
   async function openPoi(name: string): Promise<void> {
     panel.open(name);
+    track('poi_open', { poi_name: name, poi_layer: poiLayerOf.get(name) ?? '', map_id: def.id });
     if (!provider) {
       panel.setContent('No content source is configured for this map.');
       return;
@@ -56,20 +64,48 @@ export function createFantasyMap(container: HTMLElement, def: MapDefinition): L.
       const article = await provider.load(name);
       panel.open(article.title);
       panel.setContent(article.element, readMoreLink(article.externalUrl));
+      track('poi_view', { poi_name: article.title, map_id: def.id });
     } catch (err) {
       panel.setContent(errorView(name, provider, err));
+      track('poi_content_missing', { poi_name: name, map_id: def.id });
+      trackError('poi_content', err instanceof Error ? err.message : String(err), false);
     }
   }
 
   // --- controls (top-left stack: search, measure, grid, units) ---
-  const search = new SearchControl(rc.zoom);
+  // Report the POI the visitor picked — a value from our own GeoJSON — never the
+  // raw text they typed. Free-text search input is the classic accidental-PII leak.
+  const search = new SearchControl(rc.zoom, (entry) =>
+    track('search', { poi_name: entry.name, poi_layer: entry.category, map_id: def.id }),
+  );
   search.addTo(map);
 
   const distance = (a: L.LatLng, b: L.LatLng) =>
     rc.project(a).distanceTo(rc.project(b)) * def.image.metersPerPixel;
-  new MeasureControl(distance).addTo(map);
-  new GridControl(rc, def.image.metersPerPixel).addTo(map);
+  new MeasureControl(distance, (meters, points) =>
+    track('measure_complete', {
+      distance_m: Math.round(meters),
+      segments: points - 1,
+      map_id: def.id,
+    }),
+  ).addTo(map);
+  new GridControl(rc, def.image.metersPerPixel, (type, cellSize, units) =>
+    track('grid_change', { grid_type: type, cell_size: cellSize, units, map_id: def.id }),
+  ).addTo(map);
   new UnitsControl().addTo(map);
+
+  onUnitsChange((units) => track('units_change', { units }));
+  // Registered separately: the space-separated form loses the LayersControlEvent type.
+  const onLayerToggle = (e: L.LayersControlEvent) => {
+    track('layer_toggle', {
+      // the control label carries a colour-swatch span; report the plain title
+      layer: e.name.replace(/<[^>]*>/g, '').trim(),
+      state: e.type === 'overlayadd' ? 'on' : 'off',
+      map_id: def.id,
+    });
+  };
+  map.on('overlayadd', onLayerToggle);
+  map.on('overlayremove', onLayerToggle);
 
   L.control.zoom({ position: 'bottomright' }).addTo(map);
   const layersControl = L.control.layers(undefined, undefined, { position: 'bottomright' }).addTo(map);
@@ -86,6 +122,7 @@ export function createFantasyMap(container: HTMLElement, def: MapDefinition): L.
       data = await res.json();
     } catch (err) {
       console.warn(`LoreMaps: failed to load layer "${layerDef.title}" from ${layerDef.dataUrl}`, err);
+      trackError('poi_layer', `${layerDef.id}: ${err instanceof Error ? err.message : String(err)}`, false);
       return;
     }
 
@@ -99,6 +136,7 @@ export function createFantasyMap(container: HTMLElement, def: MapDefinition): L.
       onEachFeature: (feature, layer) => {
         const name: string | undefined = feature.properties?.name;
         if (!name) return;
+        poiLayerOf.set(name, layerDef.title);
         layer.bindTooltip(name, { direction: 'top' });
         layer.on('click', () => void openPoi(name));
         entries.push({
