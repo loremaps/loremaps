@@ -1,0 +1,69 @@
+﻿{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Evereska" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1531, 710 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "City of Shade" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1853, 547 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Akanax" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3163.5, 1542 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Darromar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1560, 2038.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bildoobaris" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3523, 281.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Eltabbar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3897.5, 860 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ordulin" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2450, 845.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Silverymoon" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1019, 218 ]
+      }
+    }
+  ]
+}

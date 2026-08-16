@@ -1,0 +1,533 @@
+﻿{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Westwatch-by-the-Bridge" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 802.5, 750.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sentinel Stand" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 835.5, 749 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Greyguard" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 854, 753.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Stonedoor" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 870.5, 747.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hoarfrost Hill" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 883, 748 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Icemark" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 896.5, 750.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nightfort" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 908, 752 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Deep Lake" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 918, 754.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Queensgate" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 928.5, 756 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Oakenshield (Wall)" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 956.5, 759 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Woodswatch-by-the-Pool" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 969, 760.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sable Hall" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 984, 763 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Rimegate" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 998.5, 763 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Long Barrow" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1009.5, 765 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Torches" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1020.5, 766.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Greenguard" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1029, 768 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hollow hill" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 801, 1981.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Inn of the Kneeling Man" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 743, 1985.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lord Harroway's Town" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 843.5, 2013.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Inn (They Lay with Lions)" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 692, 2008.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Unnamed village" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 737.5, 2019.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lord Lychester's Keep" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 730.5, 2028.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lady of the Leaves" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 701.5, 2049.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sallydance" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 709.5, 2061.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lord Goodbrook's Village" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 733, 2065 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Pennytree" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 776, 2054.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Shandystone" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1131, 2925.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lord Hewett's Town" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 384.5, 2597 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Old Stone Bridge Inn" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1020, 2247.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Fist of the First Men" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 812.5, 639 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Craster's Keep" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 881.5, 685 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mole's Town" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 944, 769.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Queenscrown" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 907.5, 809.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tumbledown Tower" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 709.5, 1119.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Fishing Village" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 256.5, 1275.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tower" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 930, 1204.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Holdfast" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 740, 1158.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Crofters' Village" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 707, 1158 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Baelish Keep" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1271.5, 1701.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Palisade Village" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 877, 1942.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Crossroads Inn" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 867, 2008.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nunn's Deep" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 491, 2024.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Pendric Hills" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 459, 2062 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Castle Goodbrother" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 342, 1884.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Peddleton" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 353, 1920.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nagga's Ribs" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 332, 1894 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hammerhorn" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 306, 1907.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Golden Tooth" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 532.5, 2135.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Stone Mill" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 661.5, 2072.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Rushing Falls" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 820, 2103.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Holdfast" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 841, 2177 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tumblers Falls" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 733, 2157.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Village" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 882, 2150 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Saltpans" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 959.5, 2044.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Quiet Isle" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 961.5, 2054 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mummer's Ford" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 637, 2137.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sept" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 687, 2150 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sherrer" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 638, 2148.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hollow hill" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 669.5, 2173.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Wendish Town" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 629, 2146 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Oxcross" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 406, 2201.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ivy Inn" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 926, 2186.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Brindlewood" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 933, 2224 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Parchments" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1214.5, 2429.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Harvest Hall" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 823, 2612 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lhazarene Village" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3651.5, 2857.5 ]
+      }
+    }
+  ]
+}

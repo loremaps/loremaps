@@ -1,0 +1,861 @@
+﻿{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Luskan" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 409.5, 313 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Neverwinter" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 493, 448 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Baldur's Gate" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1036, 1157 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Murann" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1149.5, 1725 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Velen" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 880, 1750 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sundrah" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 460, 2108.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sambar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 436.5, 2206.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Anchoril" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 503, 2291.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Caer Corwell" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 480, 1581 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Zazesspur" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1244.5, 1968 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Myratma" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1271.5, 2102.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Memnon" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1263.5, 2152 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Manshaka" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1523, 2349 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Almraiven" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1823, 2271 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Suldolphor" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2071.5, 2264.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tulmon" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2004, 2236.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yeshpek" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1955, 2201 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mintar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1976.5, 2070 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Saelmur" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2114, 2049.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ankhapur" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2251, 1998.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yhep" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2513.5, 2029.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Innarlith" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2710, 1987.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Derlusk" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2487, 2134.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Theymarsh" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2096.5, 2267 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yallasch" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2156.5, 2343.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ormpur" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2334.5, 2403.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sheirtalar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2326, 2497.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lushpool" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2206, 2605.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ithmong" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2127, 2638 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sammarash" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1999, 2734 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Urbeth" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1881, 2500 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Lundeth" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1385.5, 2938 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Delselar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1487, 3044.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ishau" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 881.5, 2694.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Port Castigliar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 845, 2501.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Port Nyranzaru" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 760.5, 2429.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Samargol" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 993.5, 3071.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Halagard" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2452.5, 3078.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Maarlith" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3530, 2942 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Krenalir" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4070.5, 2543.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Shoun" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4098.5, 2434.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ormpe" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4627.5, 2165.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Assur" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4555.5, 2108.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Zindalankh" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4621, 1413 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Khalab" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4607, 1338 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Port Ghaast" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 4710, 1146.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mulsantir" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3705, 529.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Surthay" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3764, 591.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Shussel" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3662.5, 1510 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Gheldaneth" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3880, 1692 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nelderild" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3804, 1658 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Unthalass" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3731.5, 1704.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sultim" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3892.5, 1269 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bezantur" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3772.5, 1122.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Escalant" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3519.5, 1145 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Laothkund" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3374.5, 1145 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Delthuntle" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3107, 1158.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Spandeliyon" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2999, 1058.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Emmech" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3389.5, 977 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Furthinghome" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3291.5, 974.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Telflamm" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3195.5, 757.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nyth" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3181, 695 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Uthmere" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3148, 554 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ilmwatch" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3112, 536 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Peltarch" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3294, 205 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sarshel" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3075, 712.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Dilpur" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3049.5, 754.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hlammach" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2973, 800 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tsurlagol" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2781.5, 831 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Procampur" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2727, 850 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ravens Bluff" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2702.5, 752 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tantras" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2655.5, 725 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Galaunt" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2653.5, 667.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ylraphon" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2637, 609 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Harrowdale" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2554, 657 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Scardale" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2543.5, 765 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yhaunn" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2519, 833.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Selgaunt" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2392.5, 952 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Saerloon" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2335, 1001.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Urmlaspyr" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2191, 1077 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Marsember" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1945.5, 1047.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ilipur" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1883.5, 1161 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Pros" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1912, 1178 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Teziir" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2014.5, 1172.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Starmantle" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2310.5, 1213 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Sapra" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2881, 1294.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Reth" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2976, 1346 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hlath" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2871, 1444 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Samra" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2721, 1580.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Iljak" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2694, 1593 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hlondeth" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2488, 1615.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mimph" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2520, 1691 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nimpeth" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2460, 1695 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Surkh" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2184, 1648 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Airspur" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3055, 1357 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Soonenar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3213.5, 1412 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mordulkin" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3376.5, 1389 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Luthcheq" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3301.5, 1497.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Phlan" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2388.5, 383.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Elmwood" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2595.5, 489 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mulmaster" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2648, 446 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hillsfar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2382.5, 504 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Melvaunt" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2449.5, 391 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Thentia" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2490, 411.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Scornubel" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1401.5, 1087 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Iriaebor" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1574, 1174 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Esmeltaran" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1416.5, 1562.5 ]
+      }
+    }
+  ]
+}

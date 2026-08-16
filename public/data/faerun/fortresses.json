@@ -1,0 +1,125 @@
+﻿{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Mithral Hall" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 884.5, 145 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Citadel Adbar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1290, 37 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Citadel Felbarr" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1153, 110 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Darkhold" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 1590, 946 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Citadel of the Raven" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2184.5, 390 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Iron Keep" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 366.5, 1365.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Irphong" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 757.5, 1718.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "IronFang Deep" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2574.5, 1279 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Fort Arran" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2561.5, 1724.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ironfang Deep" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 2703.5, 449.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nighthawk Tower" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3440, 362 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tower Threespires" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3440, 403 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Citadel Rashemen" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3920.5, 470.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "The Watchwall" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 3529, 1051.5 ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Fort Beluarian" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ 800.5, 2364.5 ]
+      }
+    }
+  ]
+}

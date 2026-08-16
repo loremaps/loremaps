@@ -1,0 +1,339 @@
+/* Map page UI: Leaflet skin, custom controls, side panel, article styles. */
+
+#map {
+  position: absolute;
+  inset: 0;
+  background: #0e0c09;
+}
+
+.lm-measuring,
+.lm-measuring .leaflet-interactive {
+  cursor: crosshair !important;
+}
+
+/* while measuring, clicks must reach the map — not the markers */
+.lm-measuring .leaflet-marker-pane *,
+.lm-measuring .leaflet-tooltip-pane * {
+  pointer-events: none !important;
+}
+
+/* --- markers --- */
+
+.lm-pin {
+  background: none;
+  border: none;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+/* --- dark skin for Leaflet chrome --- */
+
+.leaflet-bar a,
+.leaflet-bar a:hover,
+.leaflet-bar a:focus {
+  background: var(--bg-raised);
+  color: var(--ink);
+  border-bottom-color: var(--line);
+}
+
+.leaflet-bar a.leaflet-disabled {
+  background: var(--bg-raised);
+  color: #55503f;
+}
+
+.leaflet-bar a.is-active,
+.leaflet-bar a.is-on {
+  background: var(--accent);
+  color: #1a1510;
+}
+
+.leaflet-control-layers {
+  background: var(--bg-overlay);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.leaflet-control-layers-expanded {
+  padding: 8px 12px;
+}
+
+.leaflet-container .leaflet-control-attribution {
+  background: rgba(23, 20, 16, 0.75);
+  color: var(--muted);
+}
+
+.leaflet-container .leaflet-control-attribution a {
+  color: var(--accent);
+}
+
+.leaflet-container a {
+  color: var(--accent);
+}
+
+.lm-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.leaflet-tooltip {
+  background: var(--bg-overlay);
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.leaflet-tooltip-top::before {
+  border-top-color: var(--line);
+}
+
+.lm-measure-tip {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- search --- */
+
+.lm-search {
+  width: min(260px, 60vw);
+}
+
+.lm-search__input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg-overlay);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.lm-search__input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
+.lm-search__results {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 4px;
+  background: var(--bg-overlay);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  max-height: 45vh;
+  overflow-y: auto;
+}
+
+.lm-search__results li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.lm-search__results li:hover {
+  background: rgba(212, 164, 76, 0.18);
+}
+
+.lm-search__results li small {
+  color: var(--muted);
+}
+
+/* --- control buttons with svg icons --- */
+
+.lm-measure__btn,
+.lm-grid__btn,
+.lm-units__btn {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.lm-units__btn {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* --- grid panel --- */
+
+.lm-grid {
+  position: relative;
+}
+
+.lm-grid__panel {
+  position: absolute;
+  left: calc(100% + 8px);
+  top: 0;
+  width: 190px;
+  padding: 10px 12px;
+  background: var(--bg-overlay);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.lm-grid__seg {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.lm-grid__segbtn {
+  flex: 1;
+  padding: 4px 0;
+  font: inherit;
+  font-size: 0.8rem;
+  background: var(--bg-raised);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lm-grid__segbtn.is-active {
+  background: var(--accent);
+  color: #1a1510;
+  border-color: var(--accent);
+}
+
+.lm-grid__label {
+  margin-bottom: 2px;
+  font-variant-numeric: tabular-nums;
+}
+
+.lm-grid__slider {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.lm-grid__hint {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-top: 4px;
+}
+
+/* --- scale bar --- */
+
+.lm-scale {
+  font-size: 0.75rem;
+  color: var(--ink);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.lm-scale__bar {
+  height: 6px;
+  border: 2px solid var(--ink);
+  border-top: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* --- side panel --- */
+
+.lm-panel[hidden] {
+  display: none;
+}
+
+.lm-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1100; /* above Leaflet panes (≤700) and controls (1000) */
+  width: min(420px, 92%);
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-overlay);
+  backdrop-filter: blur(6px);
+  border-right: 1px solid var(--line);
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.45);
+}
+
+.lm-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.lm-panel__title {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.lm-panel__close {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg-raised);
+  color: var(--ink);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.lm-panel__close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.lm-panel__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px 16px 24px;
+  font-size: 0.92rem;
+}
+
+.lm-panel__loading {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* --- wiki article content --- */
+
+.lm-article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.lm-article h2,
+.lm-article h3,
+.lm-article h4 {
+  font-family: var(--serif);
+  margin: 1.2em 0 0.4em;
+}
+
+.lm-article table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 0.85em;
+}
+
+.lm-article td,
+.lm-article th {
+  border: 1px solid var(--line);
+  padding: 4px 8px;
+}
+
+.lm-article figure {
+  margin: 1em 0;
+}
+
+.lm-article__more {
+  margin-top: 1.5em;
+  padding-top: 1em;
+  border-top: 1px solid var(--line);
+}

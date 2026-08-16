@@ -1,0 +1,65 @@
+---
+import '../styles/global.css';
+import { maps } from '../maps';
+
+interface Props {
+  title: string;
+  description?: string;
+  fullBleed?: boolean;
+}
+
+const {
+  title,
+  description = 'Interactive atlases for fantasy worlds — search, measure and explore the lore behind every place.',
+  fullBleed = false,
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} · LoreMaps</title>
+  </head>
+  <body class:list={[{ 'full-bleed': fullBleed }]}>
+    <header class="site-header">
+      <a class="brand" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="22" height="22" aria-hidden="true">
+          <path d="M32 3 57 17.5v29L32 61 7 46.5v-29z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"></path>
+          <circle cx="32" cy="27" r="7" fill="none" stroke="currentColor" stroke-width="5"></circle>
+          <path d="M32 34v13" stroke="currentColor" stroke-width="5" stroke-linecap="round"></path>
+        </svg>
+        LoreMaps
+      </a>
+      <nav>
+        {
+          maps.map((m) => {
+            const href = `/maps/${m.id}/`;
+            return (
+              <a href={href} aria-current={currentPath === href ? 'page' : undefined}>
+                {m.title}
+              </a>
+            );
+          })
+        }
+      </nav>
+    </header>
+    <slot />
+    {
+      !fullBleed && (
+        <footer class="site-footer">
+          <p>
+            LoreMaps — map data and lore belong to their respective creators.
+            <a href="https://github.com/loremaps/LoreMaps">Source on GitHub</a>
+          </p>
+        </footer>
+      )
+    }
+  </body>
+</html>

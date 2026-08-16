@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import { maps } from '../maps';
+---
+
+<Base title="Home">
+  <main class="landing">
+    <section class="hero">
+      <h1>Organize the lore of your favorite worlds</h1>
+      <p>
+        LoreMaps turns fantasy maps into interactive atlases: pan and zoom across the world, search
+        for places, measure travel distances, lay a hex grid over the wilderness — and open the
+        lore behind every marker, straight from the community wikis.
+      </p>
+    </section>
+    <section class="map-cards">
+      {
+        maps.map((m) => (
+          <a class="map-card" href={`/maps/${m.id}/`}>
+            <img src={m.cardImage} alt={`Map of ${m.title}`} loading="lazy" />
+            <div class="map-card__body">
+              <h2>{m.title}</h2>
+              <p>{m.blurb}</p>
+            </div>
+          </a>
+        ))
+      }
+    </section>
+  </main>
+</Base>

@@ -1,0 +1,166 @@
+:root {
+  color-scheme: dark;
+  --bg: #171410;
+  --bg-raised: #211c15;
+  --bg-overlay: rgba(28, 24, 17, 0.94);
+  --ink: #e9e1cf;
+  --muted: #a99e86;
+  --accent: #d4a44c;
+  --line: #3a3226;
+  --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+a {
+  color: var(--accent);
+}
+
+/* --- header --- */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.65rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-raised);
+}
+
+.site-header .brand {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.site-header .brand svg {
+  color: var(--accent);
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.site-header nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current='page'] {
+  color: var(--accent);
+}
+
+/* --- full-bleed map pages --- */
+
+body.full-bleed {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.map-shell {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+/* --- landing page --- */
+
+.landing {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+.landing .hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin: 0 0 0.5rem;
+}
+
+.landing .hero p {
+  color: var(--muted);
+  max-width: 44rem;
+  margin: 0 0 2.5rem;
+  font-size: 1.05rem;
+}
+
+.map-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.map-card {
+  display: block;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.map-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.map-card img {
+  width: 100%;
+  aspect-ratio: 7 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.map-card .map-card__body {
+  padding: 1rem 1.15rem 1.25rem;
+}
+
+.map-card h2 {
+  font-family: var(--serif);
+  margin: 0 0 0.4rem;
+  font-size: 1.3rem;
+}
+
+.map-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1.25rem;
+  margin-top: 3rem;
+}

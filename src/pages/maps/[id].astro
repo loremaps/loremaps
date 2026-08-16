@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import { maps } from '../../maps';
+import type { MapDefinition } from '../../lib/types';
+
+export function getStaticPaths() {
+  return maps.map((def) => ({ params: { id: def.id }, props: { def } }));
+}
+
+interface Props {
+  def: MapDefinition;
+}
+
+const { def } = Astro.props;
+// <-escape so a "</script>" inside the JSON can't break out of the tag
+const configJson = JSON.stringify(def).replace(/</g, '\\u003c');
+---
+
+<Base title={def.title} description={def.blurb} fullBleed>
+  <div class="map-shell">
+    <div id="map"></div>
+  </div>
+  <script type="application/json" id="map-config" is:inline set:html={configJson} />
+  <script>
+    import { initMapPage } from '../../lib/fantasy-map';
+    initMapPage();
+  </script>
+</Base>
