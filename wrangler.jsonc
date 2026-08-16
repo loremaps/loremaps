@@ -12,6 +12,14 @@
   // straight from ./dist with no Worker invocation (and no request billed).
   // Adding "main" later — e.g. an /api/awoiaf proxy to work around the wiki's
   // missing CORS headers — is purely additive; asset routing stays as-is.
+  // Runs before every deploy (and before `wrangler dev`), so `wrangler deploy`
+  // is self-sufficient. Workers Builds executes only the deploy command when
+  // the dashboard's build-command field is empty, which left ./dist missing;
+  // keeping the step here means CI can't drift from local.
+  "build": {
+    "command": "npm run build"
+  },
+
   "assets": {
     "directory": "./dist",
 
