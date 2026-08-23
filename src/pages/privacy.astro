@@ -11,8 +11,8 @@ import Base from '../layouts/Base.astro';
       <p class="eyebrow">LoreMaps</p>
       <h1>Privacy &amp; cookies</h1>
       <p class="lede">
-        LoreMaps works without analytics. Google Analytics is optional and stays completely
-        unloaded until you accept it.
+        LoreMaps works without analytics cookies. Google Analytics loads in a limited, cookie-less
+        measurement mode while you decide, and uses analytics cookies only if you accept.
       </p>
     </header>
 
@@ -27,6 +27,10 @@ import Base from '../layouts/Base.astro';
 
     <section>
       <h2>Optional Google Analytics</h2>
+      <p>
+        Before you make a choice, Google receives cookie-less measurement pings. They do not read
+        or write Google Analytics cookies and are used by Google for consent-aware measurement.
+      </p>
       <p>
         If you accept analytics, Google Analytics sets first-party{' '}<code>_ga</code> and{' '}
         <code>_ga_*</code> cookies. Google documents a default lifetime of two years: the first distinguishes
@@ -52,11 +56,12 @@ import Base from '../layouts/Base.astro';
       <p>
         Use <strong>Cookie settings</strong> in the site footer at any time. Withdrawing analytics
         consent stops LoreMaps analytics events, removes the Google Analytics cookies and reloads
-        the page without the Google tag.
+        the page in cookie-less measurement mode.
       </p>
       <p>
         A browser Global Privacy Control or Do Not Track signal overrides an analytics acceptance,
-        so LoreMaps will not load Google Analytics on that device.
+        so LoreMaps will not load Google Analytics on that device. Browser tracking protection or
+        content blockers may also block Google Analytics requests.
       </p>
     </section>
 

@@ -24,7 +24,7 @@ const configured = import.meta.env.PROD && Boolean(import.meta.env.PUBLIC_GA_MEA
 
     const config: CookieConsentConfig = {
       mode: 'opt-in',
-      revision: 1,
+      revision: 2,
       manageScriptTags: false,
       autoClearCookies: true,
       cookie: {
@@ -68,7 +68,7 @@ const configured = import.meta.env.PROD && Boolean(import.meta.env.PUBLIC_GA_MEA
             consentModal: {
               title: 'Optional analytics',
               description:
-                'LoreMaps would like to use Google Analytics cookies to learn which maps and tools are useful. Nothing is sent to Google unless you accept.',
+                'LoreMaps uses cookie-less Google measurement while you decide. Accept analytics to let Google set analytics cookies and measure which maps and tools are useful.',
               acceptAllBtn: 'Accept analytics',
               acceptNecessaryBtn: 'Reject analytics',
               showPreferencesBtn: 'Cookie settings',
@@ -118,7 +118,7 @@ const configured = import.meta.env.PROD && Boolean(import.meta.env.PUBLIC_GA_MEA
                 {
                   title: 'Google Analytics',
                   description:
-                    'After you accept, Google Analytics records page visits, device and approximate location information, and interactions with map tools. Advertising features remain disabled.',
+                    'Google receives limited cookie-less measurement before you decide. After you accept, Google Analytics also records page visits, device and approximate location information, and interactions with map tools. Advertising features remain disabled.',
                   linkedCategory: 'analytics',
                   cookieTable: {
                     headers: {

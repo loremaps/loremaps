@@ -16,7 +16,8 @@ const {
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
-const analyticsConfigured = import.meta.env.PROD && Boolean(import.meta.env.PUBLIC_GA_MEASUREMENT_ID);
+const analyticsMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+const analyticsConfigured = import.meta.env.PROD && Boolean(analyticsMeasurementId);
 ---
 
 <!doctype html>
@@ -28,6 +29,46 @@ const analyticsConfigured = import.meta.env.PROD && Boolean(import.meta.env.PUBL
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} · LoreMaps</title>
+    {
+      analyticsConfigured && (
+        <script is:inline define:vars={{ analyticsMeasurementId }}>
+          // Advanced Consent Mode must run before the Google tag and all client
+          // application scripts. GPC/DNT are a hard opt-out: don't contact Google.
+          (() => {
+            const nav = navigator;
+            if (nav.globalPrivacyControl === true || nav.doNotTrack === '1') return;
+
+            const dataLayer = (window.dataLayer = window.dataLayer || []);
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            window.gtag = gtag;
+
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              analytics_storage: 'denied',
+              functionality_storage: 'denied',
+              personalization_storage: 'denied',
+              security_storage: 'granted',
+              wait_for_update: 500,
+            });
+            gtag('js', new Date());
+            gtag('config', analyticsMeasurementId, {
+              allow_google_signals: false,
+              allow_ad_personalization_signals: false,
+            });
+
+            const script = document.createElement('script');
+            script.async = true;
+            script.dataset.loremapsAnalytics = '';
+            script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(analyticsMeasurementId)}`;
+            document.head.appendChild(script);
+          })();
+        </script>
+      )
+    }
   </head>
   <body class:list={[{ 'full-bleed': fullBleed }]}>
     <header class="site-header">

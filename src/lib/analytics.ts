@@ -1,10 +1,10 @@
 /**
- * Consent-gated Google Analytics 4.
+ * Google Analytics 4 consent updates and app events.
  *
- * Basic consent mode is deliberate: this module is not enabled and gtag.js is
- * not requested until the visitor accepts analytics cookies. Once accepted,
- * GA manages its normal first-party client and session cookies. Ad storage,
- * Google Signals and ad personalisation remain disabled.
+ * The page layout bootstraps Advanced Consent Mode before client code runs.
+ * This module only updates that initial state after a visitor chooses whether
+ * analytics cookies may be used. Ad storage, Google Signals and ad
+ * personalisation remain disabled in every state.
  */
 
 type GtagParams = Record<string, string | number | boolean>;
@@ -23,62 +23,48 @@ const MAX_PARAM_VALUE = 100;
 let enabled = false;
 let errorListenersAttached = false;
 
+const deniedConsent = {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied',
+  functionality_storage: 'denied',
+  personalization_storage: 'denied',
+  security_storage: 'granted',
+} as const;
+
+const grantedAnalyticsConsent = {
+  ...deniedConsent,
+  analytics_storage: 'granted',
+} as const;
+
 /** Visitors who ask not to be measured aren't measured — and never reach Google at all. */
 function optedOut(): boolean {
+  if (typeof navigator === 'undefined') return true;
   const nav = navigator as Navigator & { globalPrivacyControl?: boolean };
   return nav.globalPrivacyControl === true || navigator.doNotTrack === '1';
 }
 
-/** Enable GA after an explicit analytics-consent choice. */
+function updateConsent(consent: typeof deniedConsent | typeof grantedAnalyticsConsent): boolean {
+  if (typeof window === 'undefined' || optedOut() || !window.gtag) return false;
+  window.gtag('consent', 'update', consent);
+  return true;
+}
+
+/** Grant analytics storage after an explicit analytics-consent choice. */
 export function enableAnalytics(): boolean {
   try {
-    return setup();
+    if (!updateConsent(grantedAnalyticsConsent)) return false;
+    enabled = true;
+    attachErrorListeners();
+    return true;
   } catch {
     /* analytics must never break the page */
     return false;
   }
 }
 
-function setup(): boolean {
-  const id = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
-  if (!import.meta.env.PROD || !id || typeof window === 'undefined') return false;
-  if (enabled) return true;
-  if (optedOut()) return false;
-
-  const dataLayer = (window.dataLayer ??= []);
-  // gtag.js identifies its own commands by the pushed value being an `Arguments`
-  // object — pushing a plain array instead is silently ignored. Hence the
-  // non-arrow function and `arguments`, exactly as in Google's own snippet.
-  function gtag(..._args: unknown[]): void {
-    dataLayer.push(arguments);
-  }
-  window.gtag = gtag;
-
-  gtag('consent', 'default', {
-    ad_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied',
-    analytics_storage: 'granted',
-    functionality_storage: 'denied',
-    personalization_storage: 'denied',
-    security_storage: 'granted',
-  });
-  gtag('js', new Date());
-  gtag('config', id, {
-    allow_google_signals: false,
-    allow_ad_personalization_signals: false,
-  });
-
-  if (!document.querySelector('script[data-loremaps-analytics]')) {
-    const script = document.createElement('script');
-    script.async = true;
-    script.dataset.loremapsAnalytics = '';
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
-    document.head.appendChild(script);
-  }
-
-  enabled = true;
-
+function attachErrorListeners(): void {
   if (!errorListenersAttached) {
     window.addEventListener('error', (e) => {
       trackError('window', e.message, true);
@@ -88,23 +74,13 @@ function setup(): boolean {
     });
     errorListenersAttached = true;
   }
-
-  return true;
 }
 
-/** Stop app events immediately; the consent UI clears cookies and reloads. */
+/** Deny analytics storage immediately; the consent UI clears cookies and reloads. */
 export function disableAnalytics(): void {
   enabled = false;
   try {
-    window.gtag?.('consent', 'update', {
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      analytics_storage: 'denied',
-      functionality_storage: 'denied',
-      personalization_storage: 'denied',
-      security_storage: 'granted',
-    });
+    updateConsent(deniedConsent);
   } catch {
     /* analytics must never break the page */
   }
